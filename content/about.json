@@ -1,0 +1,50 @@
+{
+  "ru": {
+    "intro": "Мы — архитектурное бюро из Москвы. С 2011 года проектируем частные дома, общественные здания и интерьеры по всей России. Нас двенадцать человек, и над каждым проектом от первого эскиза до сдачи работает одна команда.",
+    "image": { "key": "about-concrete", "alt": "Бетонные блоки, сложенные под разными углами", "width": 1800, "height": 2400 },
+    "approach": [
+      { "title": "Конструкция как образ", "text": "Мы не прячем несущие элементы за отделкой. Если балка или колонна стоит на своём месте, она и есть главное украшение." },
+      { "title": "Свет прежде формы", "text": "Положение окон рассчитываем раньше, чем рисуем фасад. Сначала моделируем инсоляцию на каждый месяц, потом ищем объём, который её пропустит." },
+      { "title": "Мало материалов", "text": "Три-четыре материала на весь проект. Их проще достать, легче сочетать, и здание выглядит цельным спустя годы." }
+    ],
+    "team": [
+      { "name": "Анна Северцева", "role": "Основатель, главный архитектор" },
+      { "name": "Илья Рамзин", "role": "Партнёр, руководитель проектов" },
+      { "name": "Мария Ольхова", "role": "Ведущий архитектор интерьеров" },
+      { "name": "Тимур Гаязов", "role": "Главный конструктор" },
+      { "name": "Вера Литвак", "role": "Ландшафтный архитектор" },
+      { "name": "Глеб Корчагин", "role": "Архитектор" }
+    ],
+    "stages": [
+      { "title": "Знакомство и участок", "text": "Выезжаем на место, изучаем рельеф, соседей, ветер и солнце. Записываем, как вы живёте или как будет работать здание." },
+      { "title": "Концепция", "text": "Предлагаем два-три варианта объёма и планировки с макетами. Выбираем один вместе с вами." },
+      { "title": "Рабочий проект", "text": "Разрабатываем все разделы: архитектуру, конструкции, инженерные системы, интерьер. Проходим экспертизу." },
+      { "title": "Подбор подрядчиков", "text": "Готовим тендерную документацию и помогаем выбрать строителей и производителей по смете и срокам." },
+      { "title": "Авторский надзор", "text": "Бываем на стройке каждую неделю и отвечаем за то, чтобы построенное совпало с нарисованным." }
+    ]
+  },
+  "en": {
+    "intro": "We are an architecture practice based in Moscow. Since 2011 we have designed private houses, public buildings and interiors across Russia. There are twelve of us, and one team carries each project from the first sketch to handover.",
+    "image": { "key": "about-concrete", "alt": "Concrete blocks stacked at different angles", "width": 1800, "height": 2400 },
+    "approach": [
+      { "title": "Structure as expression", "text": "We do not hide load-bearing elements behind finishes. When a beam or column is in the right place, it is the ornament." },
+      { "title": "Light before form", "text": "We position windows before we draw a facade. First we model sunlight for every month, then look for the volume that lets it in." },
+      { "title": "Few materials", "text": "Three or four materials for an entire project. They are easier to source, easier to combine, and the building still looks whole years later." }
+    ],
+    "team": [
+      { "name": "Anna Severtseva", "role": "Founder, principal architect" },
+      { "name": "Ilya Ramzin", "role": "Partner, head of projects" },
+      { "name": "Maria Olkhova", "role": "Lead interior architect" },
+      { "name": "Timur Gayazov", "role": "Chief structural engineer" },
+      { "name": "Vera Litvak", "role": "Landscape architect" },
+      { "name": "Gleb Korchagin", "role": "Architect" }
+    ],
+    "stages": [
+      { "title": "Brief and site", "text": "We visit the site and study the terrain, neighbours, wind and sun. We record how you live, or how the building will be used." },
+      { "title": "Concept", "text": "We present two or three options for massing and layout, with models, and choose one together with you." },
+      { "title": "Detailed design", "text": "We develop every discipline: architecture, structure, building services, interiors. We take the project through state review." },
+      { "title": "Contractor selection", "text": "We prepare tender documents and help you choose builders and manufacturers on cost and schedule." },
+      { "title": "Site supervision", "text": "We are on site every week and make sure what gets built matches what was drawn." }
+    ]
+  }
+}
