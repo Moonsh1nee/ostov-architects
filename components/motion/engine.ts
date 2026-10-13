@@ -101,25 +101,21 @@ function setupPage(root: HTMLElement): gsap.Context {
 
     const mm = gsap.matchMedia();
     mm.add("(min-width: 768px)", () => {
-      for (const section of root.querySelectorAll<HTMLElement>("[data-hscroll]")) {
-        const pinned = section.querySelector<HTMLElement>("[data-hscroll-pin]");
-        const track = section.querySelector<HTMLElement>("[data-hscroll-track]");
-        if (!pinned || !track) continue;
-        // Native horizontal scroll is the no-JS / mobile fallback; pinning replaces it here.
-        gsap.set(track, { overflowX: "visible" });
-        const distance = () => Math.max(0, track.scrollWidth - track.clientWidth);
-        gsap.to(track, {
-          x: () => -distance(),
-          ease: "none",
-          scrollTrigger: {
-            trigger: pinned,
-            start: "top top",
-            end: () => `+=${distance()}`,
-            pin: true,
-            scrub: 0.6,
-            invalidateOnRefresh: true,
-          },
-        });
+      // Expanding photo: the text panel slides off to the right and the photo
+      // behind it takes the whole screen. Without JS (or on phones) the same
+      // markup is simply a split screen / stacked block.
+      for (const section of root.querySelectorAll<HTMLElement>("[data-expand]")) {
+        const pinned = section.querySelector<HTMLElement>("[data-expand-pin]");
+        const panel = section.querySelector<HTMLElement>("[data-expand-panel]");
+        const picture = section.querySelector<HTMLElement>("[data-expand-media] picture");
+        if (!pinned || !panel || !picture) continue;
+        gsap
+          .timeline({
+            scrollTrigger: { trigger: pinned, start: "top top", end: "+=130%", pin: true, scrub: 0.6 },
+          })
+          .to({}, { duration: 0.3 }) // hold: let the statement be read first
+          .to(panel, { xPercent: 100, ease: "power2.inOut", duration: 1 })
+          .fromTo(picture, { scale: 1.15 }, { scale: 1, ease: "none", duration: 1 }, "<");
       }
     });
   }, root);

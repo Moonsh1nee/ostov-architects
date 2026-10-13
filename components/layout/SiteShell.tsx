@@ -1,6 +1,7 @@
 import { fontVariables } from "@/lib/fonts";
 import { getDictionary } from "@/lib/i18n";
 import type { Locale } from "@/lib/types";
+import { INTRO_SCRIPT } from "../intro-script";
 import { MotionRoot } from "../motion/MotionRoot";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
@@ -8,7 +9,14 @@ import { Header } from "./Header";
 export function SiteShell({ locale, children }: { locale: Locale; children: React.ReactNode }) {
   const t = getDictionary(locale);
   return (
-    <html lang={locale} className={fontVariables}>
+    // The intro script sets data-intro before hydration, hence suppressHydrationWarning.
+    <html lang={locale} className={fontVariables} suppressHydrationWarning>
+      {/* Raw <head> is valid in an App Router root layout (the rule targets pages/), and a
+          parser-blocking inline script is the only way to decide on the intro before first paint. */}
+      {/* eslint-disable-next-line @next/next/no-head-element */}
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: INTRO_SCRIPT }} />
+      </head>
       <body className="bg-paper text-ink">
         <a
           href="#main"
@@ -23,7 +31,8 @@ export function SiteShell({ locale, children }: { locale: Locale; children: Reac
           <span />
         </div>
         <Header locale={locale} />
-        <main id="main" className="relative z-1">
+        {/* No z-index here: a stacking context on <main> would trap the fixed intro below the header. */}
+        <main id="main" className="relative">
           {children}
         </main>
         <Footer locale={locale} />

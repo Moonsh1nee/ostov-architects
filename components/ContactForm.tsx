@@ -192,7 +192,7 @@ export function ContactForm({ labels, projectTypes }: ContactFormProps) {
 
       <button
         type="submit"
-        className="group mt-12 inline-flex items-center gap-4 bg-ink px-8 py-4 text-paper transition-transform duration-200 active:scale-[0.98]"
+        className="group pill pill-dark mt-12 px-7 py-3.5"
       >
         {labels.submit}
         <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">

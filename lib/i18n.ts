@@ -3,6 +3,8 @@ import type { Category, Locale } from "./types";
 const ru = {
   brand: "Ostov Architects",
   brandShort: "Остов",
+  wordmark: "Остов",
+  intro: { skip: "Пропустить" },
   tagline: "Архитектурное бюро",
   city: "Москва",
   since: "с 2011",
@@ -17,6 +19,9 @@ const ru = {
   >,
   all: "Все",
   home: {
+    viewProject: "Смотреть проект",
+    aboutLink: "О бюро",
+    geography: "География проектов",
     scroll: "Листайте вниз",
     featured: "Избранные проекты",
     allProjects: "Все проекты",
@@ -100,6 +105,8 @@ export type Dictionary = typeof ru;
 const en: Dictionary = {
   brand: "Ostov Architects",
   brandShort: "Ostov",
+  wordmark: "Ostov",
+  intro: { skip: "Skip" },
   tagline: "Architecture practice",
   city: "Moscow",
   since: "since 2011",
@@ -111,6 +118,9 @@ const en: Dictionary = {
   categorySingular: { residential: "Residential", public: "Public building", interior: "Interior" },
   all: "All",
   home: {
+    viewProject: "View project",
+    aboutLink: "About the studio",
+    geography: "Where we have built",
     scroll: "Scroll down",
     featured: "Selected projects",
     allProjects: "All projects",

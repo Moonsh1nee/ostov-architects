@@ -17,7 +17,7 @@ export async function AboutView({ locale }: { locale: Locale }) {
       <PageHeader title={t.about.title} />
 
       <section className="grid gap-10 pb-28 md:grid-cols-12 md:pb-44">
-        <p data-reveal="fade" className="text-[clamp(1.5rem,3.2vw,3rem)] leading-[1.12] tracking-[-0.03em] md:col-span-7">
+        <p data-reveal="fade" className="statement text-[clamp(1.5rem,2.8vw,2.75rem)] md:col-span-7">
           {about.intro}
         </p>
         <div className="frame aspect-4/5 md:col-span-4 md:col-start-9" data-reveal="clip">

@@ -71,7 +71,7 @@ export function HeaderNav({ links, labels }: HeaderNavProps) {
             key={link.href}
             href={link.href}
             aria-current={isActive(pathname, link.href) ? "page" : undefined}
-            className="link-underline text-sm aria-[current=page]:bg-[length:100%_1px]"
+            className="link-underline text-xs font-medium tracking-[0.02em] uppercase aria-[current=page]:bg-[length:100%_1px]"
           >
             {link.label}
           </Link>

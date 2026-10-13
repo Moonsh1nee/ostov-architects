@@ -40,7 +40,7 @@ export function ProjectCard({
         />
       </div>
       <div className="mt-4 flex items-baseline justify-between gap-4 border-t border-line pt-3">
-        <Heading className="text-[clamp(1.25rem,2vw,1.625rem)] leading-tight tracking-[-0.02em]">
+        <Heading className="statement text-[clamp(1.125rem,1.8vw,1.5rem)]">
           <span className="caption mr-3 align-middle text-ink-soft">{String(index + 1).padStart(2, "0")}</span>
           {project.title}
         </Heading>

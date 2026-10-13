@@ -24,19 +24,17 @@ export function ProjectsExplorer({ projects, locale }: { projects: Project[]; lo
 
   return (
     <>
-      <div role="group" aria-label={t.projects.filterLabel} className="flex flex-wrap gap-x-6 gap-y-3 border-y border-line py-4">
+      <div role="group" aria-label={t.projects.filterLabel} className="flex flex-wrap gap-2 border-y border-line py-4">
         {(["all", ...CATEGORIES] as const).map((f) => (
           <button
             key={f}
             type="button"
             aria-pressed={filter === f}
             onClick={() => select(f)}
-            className="group flex items-baseline gap-1.5 py-1 text-sm text-ink-soft transition-colors hover:text-ink aria-pressed:text-ink"
+            className="pill aria-pressed:bg-ink aria-pressed:text-paper"
           >
-            <span className="link-underline group-aria-pressed:bg-[length:100%_1px]">
-              {f === "all" ? t.all : t.categories[f]}
-            </span>
-            <sup className="caption text-[0.625rem]">{count(f)}</sup>
+            {f === "all" ? t.all : t.categories[f]}
+            <span className="opacity-60">{count(f)}</span>
           </button>
         ))}
       </div>

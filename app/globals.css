@@ -1,15 +1,19 @@
 @import "tailwindcss";
 
 :root {
-  --paper: #eeebe5;
-  --paper-deep: #e4e0d8;
-  --ink: #161614;
-  --ink-soft: #57544e;
-  --line: rgb(22 22 20 / 0.14);
+  /* Neutral paper: the photography is the only warm thing on the page. */
+  --paper: #efeeec;
+  --paper-deep: #e3e2df;
+  --ink: #201e1e;
+  --ink-soft: #5d5a59;
+  --line: rgb(32 30 30 / 0.12);
   --accent: #9c4a2b;
   --gutter: clamp(1rem, 3vw, 2.5rem);
   --header-h: 4.5rem;
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  /* Hero slideshow: 3 slides × 6s, 1.2s crossfade. */
+  --slide: 6s;
+  --slide-fade: 1.2s;
 }
 
 @theme inline {
@@ -35,7 +39,7 @@
 
   body {
     font-family: var(--font-sans);
-    font-weight: 350;
+    font-weight: 400;
     -webkit-font-smoothing: antialiased;
     -webkit-tap-highlight-color: transparent;
   }
@@ -44,7 +48,7 @@
   h2,
   h3 {
     text-wrap: balance;
-    font-weight: 300;
+    font-weight: 500;
   }
 
   p {
@@ -108,10 +112,61 @@
     text-transform: uppercase;
   }
 
+  /* Statement type: dense, bold, all caps. */
   .display {
-    font-weight: 300;
-    letter-spacing: -0.045em;
-    line-height: 0.92;
+    font-weight: 650;
+    letter-spacing: -0.035em;
+    line-height: 0.9;
+    text-transform: uppercase;
+  }
+
+  /* Uppercase running text for short studio statements. */
+  .statement {
+    font-weight: 450;
+    letter-spacing: -0.015em;
+    line-height: 1.04;
+    text-transform: uppercase;
+  }
+
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 999px;
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    background: var(--paper-deep);
+    color: var(--ink);
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease,
+      transform 0.16s ease-out;
+  }
+  .pill:active {
+    transform: scale(0.97);
+  }
+  .pill-light {
+    background: rgb(239 238 236 / 0.88);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+  }
+  .pill-dark {
+    background: var(--ink);
+    color: var(--paper);
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .pill:hover {
+      background: var(--ink);
+      color: var(--paper);
+    }
+    .pill-dark:hover {
+      background: var(--accent);
+    }
   }
 
   .link-underline {
@@ -148,14 +203,13 @@
   .transition-overlay {
     position: fixed;
     inset: 0;
-    z-index: 60;
+    z-index: 80;
     background: var(--ink);
     visibility: hidden;
     pointer-events: none;
   }
 }
 
-/* Hero entrance runs in CSS so it starts on first paint, before any JS arrives. */
 @keyframes hero-zoom {
   from {
     transform: scale(1.1);
@@ -181,6 +235,7 @@
   }
 }
 
+/* Page titles and the project cover: CSS-only, they start on first paint. */
 .hero-image img {
   animation: hero-zoom 2.6s var(--ease-out) both;
   will-change: transform;
@@ -194,11 +249,103 @@
 .hero-line > span {
   display: block;
   animation: line-up 1.2s var(--ease-out) both;
-  /* Line 1 starts at once: on the home page it is the LCP element. */
   animation-delay: calc(var(--i, 0) * 0.12s);
 }
 .hero-fade {
-  animation: fade-in 1s ease-out 0.9s both;
+  animation: fade-in 1s ease-out 0.6s both;
+}
+
+/* ── Home hero slideshow ─────────────────────────────────────────────
+   Pure CSS so it runs from the first frame. Every slide shares one 18s cycle,
+   offset by its index; slide 0 starts already visible (negative delay). */
+@keyframes slide-show {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  6.667% {
+    opacity: 1;
+    visibility: visible;
+  }
+  33.333% {
+    opacity: 1;
+    visibility: visible;
+  }
+  40% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes slide-zoom {
+  0% {
+    transform: scale(1.12);
+  }
+  40% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.slide,
+.slide-label {
+  animation: slide-show calc(var(--slide) * 3) linear infinite both;
+  animation-delay: calc(var(--i, 0) * var(--slide) - var(--slide-fade));
+}
+.slide img {
+  animation: slide-zoom calc(var(--slide) * 3) var(--ease-out) infinite both;
+  animation-delay: calc(var(--i, 0) * var(--slide) - var(--slide-fade));
+}
+
+/* ── Intro ───────────────────────────────────────────────────────────
+   Once per session (an inline script in <head> sets html[data-intro]).
+   The wordmark's first letter is visible from the first frame: it is the LCP. */
+@keyframes intro-out {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes rule-draw {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+@keyframes rise-out {
+  to {
+    transform: translateY(-110%);
+  }
+}
+.intro {
+  animation: intro-out 0.8s var(--ease-out) 2.9s forwards;
+}
+.intro-letter {
+  display: inline-block;
+  animation:
+    line-up 1.1s var(--ease-out) both,
+    rise-out 0.8s cubic-bezier(0.7, 0, 0.84, 0) 2.5s forwards;
+  animation-delay: calc(var(--i, 0) * 0.07s), calc(2.5s + var(--i, 0) * 0.04s);
+}
+.intro-rule {
+  transform-origin: left;
+  animation: rule-draw 1.4s var(--ease-out) 0.3s both;
+}
+html[data-intro="leaving"] .intro {
+  animation: intro-out 0.45s var(--ease-out) forwards;
+}
+html[data-intro="skip"] .intro {
+  display: none;
+}
+/* While the intro plays, the hero UI waits for it instead of animating underneath. */
+html:not([data-intro="skip"]):not([data-intro="leaving"]) .hero-fade {
+  animation-delay: 3.2s;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -209,6 +356,20 @@
     animation-delay: 0s !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+  /* Looping animations at 0.01ms would strobe: show the first slide, statically. */
+  .slide,
+  .slide-label,
+  .slide img {
+    animation: none !important;
+  }
+  .slide:not(:first-child),
+  .slide-label:not(:first-child) {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .intro {
+    display: none;
   }
 }
 
@@ -228,4 +389,10 @@ html.lenis body {
    on a dark section (the home hero) gets light header text from the first paint. */
 body:has(main > [data-tone="dark"]:first-child) [data-site-header]:not([data-tone]) {
   color: var(--paper);
+}
+
+/* The header would show through the intro's scrim; keep it out until the intro is gone. */
+html:not([data-intro="skip"]) body:has(.intro) [data-site-header] {
+  opacity: 0;
+  visibility: hidden;
 }
