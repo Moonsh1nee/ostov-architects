@@ -1,1 +1,214 @@
 @import "tailwindcss";
+
+:root {
+  --paper: #eeebe5;
+  --paper-deep: #e4e0d8;
+  --ink: #161614;
+  --ink-soft: #57544e;
+  --line: rgb(22 22 20 / 0.14);
+  --accent: #9c4a2b;
+  --gutter: clamp(1rem, 3vw, 2.5rem);
+  --header-h: 4.5rem;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-deep: var(--paper-deep);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-mono), ui-monospace, monospace;
+  --spacing-gutter: var(--gutter);
+  --ease-out-expo: var(--ease-out);
+}
+
+@layer base {
+  html {
+    background: var(--paper);
+    color: var(--ink);
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    font-weight: 350;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+    font-weight: 300;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background: var(--ink);
+    color: var(--paper);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@layer components {
+  .container-x {
+    padding-inline: var(--gutter);
+  }
+
+  /* Drafting axes behind the whole page: the "ostov" (frame) of the layout. */
+  .axes {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    padding-inline: var(--gutter);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .axes > span {
+    border-left: 1px solid var(--line);
+  }
+  .axes > span:last-child {
+    border-right: 1px solid var(--line);
+  }
+  @media (max-width: 767px) {
+    .axes {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .axes > span:nth-child(n + 3) {
+      display: none;
+    }
+    .axes > span:nth-child(2) {
+      border-right: 1px solid var(--line);
+    }
+  }
+
+  .caption {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
+  .display {
+    font-weight: 300;
+    letter-spacing: -0.045em;
+    line-height: 0.92;
+  }
+
+  .link-underline {
+    background: linear-gradient(currentColor, currentColor) no-repeat 0 100% / 0 1px;
+    transition: background-size 0.4s var(--ease-out);
+  }
+  @media (hover: hover) {
+    .link-underline:hover {
+      background-size: 100% 1px;
+    }
+  }
+
+  /* Media frames: fixed aspect so nothing shifts while images stream in. */
+  .frame {
+    position: relative;
+    overflow: hidden;
+    background: var(--paper-deep);
+  }
+  .frame img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/* Hero entrance runs in CSS so it starts on first paint, before any JS arrives. */
+@keyframes hero-zoom {
+  from {
+    transform: scale(1.18);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes line-up {
+  from {
+    transform: translateY(105%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.hero-image img {
+  animation: hero-zoom 2.6s var(--ease-out) both;
+  will-change: transform;
+}
+.hero-line {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0.08em;
+  margin-bottom: -0.08em;
+}
+.hero-line > span {
+  display: block;
+  animation: line-up 1.2s var(--ease-out) both;
+  animation-delay: calc(0.25s + var(--i, 0) * 0.12s);
+}
+.hero-fade {
+  animation: fade-in 1s ease-out 0.9s both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0s !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Lenis */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-stopped {
+  overflow: clip;
+}
+
+/* Before hydration the header can't measure what's under it; a page that opens
+   on a dark section (the home hero) gets light header text from the first paint. */
+body:has(main > [data-tone="dark"]:first-child) [data-site-header]:not([data-tone]) {
+  color: var(--paper);
+}

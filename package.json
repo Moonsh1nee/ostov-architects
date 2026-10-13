@@ -3,8 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "images": "tsx scripts/build-images.ts",
+    "predev": "npm run images",
     "dev": "next dev -p 3004",
+    "prebuild": "npm run images",
     "build": "next build",
+    "postbuild": "tsx scripts/fix-export-segments.ts",
     "start": "npx serve out -p 3004",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",

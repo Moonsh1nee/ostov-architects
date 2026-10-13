@@ -19,14 +19,24 @@ jobs:
     runs-on: ubuntu-latest
     env:
       NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
-      NEXT_PUBLIC_SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
     steps:
       - uses: actions/checkout@v4
+      # Owner is mixed-case; canonical URLs and the sitemap should not be.
+      - run: echo "NEXT_PUBLIC_SITE_URL=https://${OWNER,,}.github.io/${{ github.event.repository.name }}" >> "$GITHUB_ENV"
+        env:
+          OWNER: ${{ github.repository_owner }}
       - uses: actions/setup-node@v4
         with:
           node-version: 24
           cache: npm
       - run: npm ci
+      # AVIF encoding dominates build time; variants only change with originals or the pipeline.
+      - uses: actions/cache@v4
+        with:
+          path: |
+            public/img
+            public/og
+          key: images-${{ hashFiles('media/originals/**', 'scripts/build-images.ts', 'lib/images.ts') }}
       - run: npm run lint
       - run: npm run typecheck
       - run: npm test
