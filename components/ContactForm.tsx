@@ -121,7 +121,7 @@ export function ContactForm({ labels, projectTypes }: ContactFormProps) {
         </div>
         <div>
           <label htmlFor={`${id}-phone`} className="caption text-ink-soft">
-            {labels.phone} <span className="normal-case opacity-70">· {labels.phoneHint}</span>
+            {labels.phone} <span className="normal-case">· {labels.phoneHint}</span>
           </label>
           <input
             {...a11y("phone")}

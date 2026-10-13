@@ -10,10 +10,10 @@ export const sans = Geologica({
 export const mono = IBM_Plex_Mono({
   subsets: ["latin", "cyrillic"],
   weight: ["400"],
-  display: "swap",
   variable: "--font-mono",
-  // Captions are small and below the fold; don't compete with the hero for bandwidth.
-  preload: false,
+  // Decorative captions: if the font misses the first paint, keep the fallback rather
+  // than swap late — a swap re-wraps captions and was the page's only layout shift.
+  display: "optional",
 });
 
 export const fontVariables = `${sans.variable} ${mono.variable}`;

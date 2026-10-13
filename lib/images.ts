@@ -22,7 +22,8 @@ export function variantFile(key: string, width: number, format: ImageFormat): st
 // Full-bleed landscape shots shown in a phone-height frame would otherwise make
 // the browser fetch a 2400w file just to fill the height. A real portrait crop
 // is both sharper and several times lighter.
-export const PORTRAIT_WIDTHS = [480, 800, 1200] as const;
+// Tuned to real phones: 412px at DPR 1.75 needs 721w, 390px at DPR 3 needs 1170w.
+export const PORTRAIT_WIDTHS = [480, 750, 1080] as const;
 export const PORTRAIT_ASPECT = { width: 9, height: 16 } as const;
 export const PORTRAIT_MEDIA = "(max-aspect-ratio: 4/5)";
 

@@ -56,7 +56,8 @@ async function jobsFor(file: string): Promise<Job[]> {
     for (const w of PORTRAIT_WIDTHS) {
       const crop = { width: w, height: Math.round((w * PORTRAIT_ASPECT.height) / PORTRAIT_ASPECT.width) };
       const cropped = (img: Sharp) => img.resize({ ...crop, fit: "cover", position: "attention" });
-      jobs.push(job(portraitFile(key, w, "avif"), (img) => cropped(img).avif({ quality: 50, effort: 4 })));
+      // Full-bleed under a scrim with text on top: a lower quality is invisible here.
+      jobs.push(job(portraitFile(key, w, "avif"), (img) => cropped(img).avif({ quality: 42, effort: 4 })));
       jobs.push(job(portraitFile(key, w, "webp"), (img) => cropped(img).webp({ quality: 75 })));
     }
   }

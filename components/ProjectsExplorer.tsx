@@ -56,6 +56,8 @@ export function ProjectsExplorer({ projects, locale }: { projects: Project[]; lo
                   project={project}
                   locale={locale}
                   index={projects.indexOf(project)}
+                  headingLevel="h2"
+                  priority={i === 0}
                   aspect={wide ? "aspect-4/5 md:aspect-6/5" : "aspect-4/5"}
                   sizes={wide ? "(min-width: 768px) 56vw, 100vw" : "(min-width: 768px) 32vw, 100vw"}
                 />

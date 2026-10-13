@@ -158,7 +158,7 @@
 /* Hero entrance runs in CSS so it starts on first paint, before any JS arrives. */
 @keyframes hero-zoom {
   from {
-    transform: scale(1.18);
+    transform: scale(1.1);
   }
   to {
     transform: scale(1);
@@ -194,7 +194,8 @@
 .hero-line > span {
   display: block;
   animation: line-up 1.2s var(--ease-out) both;
-  animation-delay: calc(0.25s + var(--i, 0) * 0.12s);
+  /* Line 1 starts at once: on the home page it is the LCP element. */
+  animation-delay: calc(var(--i, 0) * 0.12s);
 }
 .hero-fade {
   animation: fade-in 1s ease-out 0.9s both;

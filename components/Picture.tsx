@@ -65,7 +65,8 @@ export function Picture({
         width={image.width}
         height={image.height}
         loading={priority ? "eager" : "lazy"}
-        decoding={priority ? "sync" : "async"}
+        // Never "sync": it holds the whole first paint until the hero has downloaded and decoded.
+        decoding="async"
         fetchPriority={priority ? "high" : "auto"}
         className={imgClassName}
         {...imgProps}

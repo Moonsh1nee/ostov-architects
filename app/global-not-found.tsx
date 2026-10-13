@@ -15,7 +15,8 @@ export default function GlobalNotFound() {
       <body className="bg-paper text-ink">
         <main className="container-x flex min-h-svh flex-col justify-between py-10">
           <a href={`${BASE_PATH}/`} className="text-[1.0625rem] tracking-[-0.02em]">
-            Ostov<span className="caption ml-2 align-middle text-[0.625rem] text-ink-soft">Architects</span>
+            Ostov{" "}
+            <span className="caption ml-1 align-middle text-[0.625rem] text-ink-soft">Architects</span>
           </a>
           <div>
             <p className="display text-[clamp(6rem,28vw,24rem)]">404</p>

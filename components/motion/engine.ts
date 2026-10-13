@@ -77,7 +77,10 @@ function setupPage(root: HTMLElement): gsap.Context {
           opacity: 1,
           stagger: 0.1,
           ease: "none",
-          scrollTrigger: { trigger: text, start: "top 80%", end: "bottom 50%", scrub: true },
+          // Dim only from the moment the text reaches the viewport edge: until then
+          // it keeps full contrast (no flash, and audits don't see 0.14-opacity text).
+          immediateRender: false,
+          scrollTrigger: { trigger: text, start: "top bottom", end: "bottom 55%", scrub: true },
         },
       );
     }

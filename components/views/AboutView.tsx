@@ -21,7 +21,12 @@ export async function AboutView({ locale }: { locale: Locale }) {
           {about.intro}
         </p>
         <div className="frame aspect-4/5 md:col-span-4 md:col-start-9" data-reveal="clip">
-          <Picture image={about.image} sizes="(min-width: 768px) 30vw, 100vw" imgProps={{ "data-parallax": "0.1" }} />
+          <Picture
+            image={about.image}
+            sizes="(min-width: 768px) 30vw, 100vw"
+            priority
+            imgProps={{ "data-parallax": "0.1" }}
+          />
         </div>
       </section>
 

@@ -21,9 +21,9 @@ export function Header({ locale }: { locale: Locale }) {
         <Link
           href={localePath(locale, routes.home)}
           className="pointer-events-auto text-[1.0625rem] font-normal tracking-[-0.02em]"
-          aria-label={t.brand}
         >
-          Ostov<span className="caption ml-2 align-middle text-[0.625rem] opacity-70">Architects</span>
+          Ostov{" "}
+          <span className="caption ml-1 align-middle text-[0.625rem] opacity-70">Architects</span>
         </Link>
         <HeaderNav
           links={links}
