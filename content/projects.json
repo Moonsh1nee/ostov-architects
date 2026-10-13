@@ -7,12 +7,37 @@
       "year": 2024,
       "area": 1240,
       "category": "public",
-      "cover": { "key": "light-pavilion-cover", "alt": "Белые изогнутые стены выставочного зала под световым фонарём", "width": 1800, "height": 2400 },
+      "cover": {
+        "key": "light-pavilion-cover",
+        "alt": "Белые изогнутые стены выставочного зала под световым фонарём",
+        "width": 1800,
+        "height": 2400
+      },
       "gallery": [
-        { "key": "light-pavilion-01", "alt": "Винтовая лестница из светлого бетона в атриуме", "width": 1600, "height": 2400 },
-        { "key": "light-pavilion-02", "alt": "Посетитель на скамье перед картинами в белом зале", "width": 1920, "height": 2400 },
-        { "key": "light-pavilion-03", "alt": "Фасад из повторяющихся белых бетонных ячеек", "width": 1600, "height": 2400 },
-        { "key": "light-pavilion-04", "alt": "Бетонные объёмы павильона на фоне неба", "width": 1894, "height": 2400 }
+        {
+          "key": "light-pavilion-01",
+          "alt": "Винтовая лестница из светлого бетона в атриуме",
+          "width": 1600,
+          "height": 2400
+        },
+        {
+          "key": "light-pavilion-02",
+          "alt": "Посетитель на скамье перед картинами в белом зале",
+          "width": 1920,
+          "height": 2400
+        },
+        {
+          "key": "light-pavilion-03",
+          "alt": "Фасад из повторяющихся белых бетонных ячеек",
+          "width": 1600,
+          "height": 2400
+        },
+        {
+          "key": "light-pavilion-04",
+          "alt": "Бетонные объёмы павильона на фоне неба",
+          "width": 1894,
+          "height": 2400
+        }
       ],
       "description": [
         "Выставочный павильон на месте бывшего заводского склада. Город попросил площадку для современного искусства, которая будет работать круглый год и не потребует искусственного света днём.",
@@ -27,12 +52,37 @@
       "year": 2024,
       "area": 132,
       "category": "interior",
-      "cover": { "key": "presnya-apartment-cover", "alt": "Гостиная в серых тонах с низким диваном и окном в пол", "width": 2400, "height": 1500 },
+      "cover": {
+        "key": "presnya-apartment-cover",
+        "alt": "Гостиная в серых тонах с низким диваном и окном в пол",
+        "width": 2400,
+        "height": 1500
+      },
       "gallery": [
-        { "key": "presnya-apartment-01", "alt": "Тёмная стена с подсветкой и мягкий угловой диван", "width": 1920, "height": 2400 },
-        { "key": "presnya-apartment-02", "alt": "Вид на гостиную от входа: стеллаж, диван и большое окно", "width": 1920, "height": 2400 },
-        { "key": "presnya-apartment-03", "alt": "Плетёное кресло у светлой стены", "width": 1600, "height": 2400 },
-        { "key": "presnya-apartment-04", "alt": "Льняные шторы в мягком дневном свете", "width": 1600, "height": 2400 }
+        {
+          "key": "presnya-apartment-01",
+          "alt": "Тёмная стена с подсветкой и мягкий угловой диван",
+          "width": 1920,
+          "height": 2400
+        },
+        {
+          "key": "presnya-apartment-02",
+          "alt": "Вид на гостиную от входа: стеллаж, диван и большое окно",
+          "width": 1920,
+          "height": 2400
+        },
+        {
+          "key": "presnya-apartment-03",
+          "alt": "Плетёное кресло у светлой стены",
+          "width": 1600,
+          "height": 2400
+        },
+        {
+          "key": "presnya-apartment-04",
+          "alt": "Льняные шторы в мягком дневном свете",
+          "width": 1600,
+          "height": 2400
+        }
       ],
       "description": [
         "Квартира для пары, которая много работает из дома и не любит, когда вещи на виду. Исходная планировка состояла из пяти маленьких комнат и длинного коридора.",
@@ -47,11 +97,31 @@
       "year": 2023,
       "area": 186,
       "category": "interior",
-      "cover": { "key": "arch-apartment-cover", "alt": "Встроенный диван под арочными окнами в светлой гостиной", "width": 2400, "height": 1600 },
+      "cover": {
+        "key": "arch-apartment-cover",
+        "alt": "Встроенный диван под арочными окнами в светлой гостиной",
+        "width": 2400,
+        "height": 1600
+      },
       "gallery": [
-        { "key": "arch-apartment-01", "alt": "Скульптурная винтовая лестница из гладкой штукатурки", "width": 2400, "height": 1600 },
-        { "key": "arch-apartment-02", "alt": "Деревянная лестница вдоль белой стены", "width": 1600, "height": 2400 },
-        { "key": "arch-apartment-03", "alt": "Белые ступени, уходящие на антресоль", "width": 1600, "height": 2400 }
+        {
+          "key": "arch-apartment-01",
+          "alt": "Скульптурная винтовая лестница из гладкой штукатурки",
+          "width": 2400,
+          "height": 1600
+        },
+        {
+          "key": "arch-apartment-02",
+          "alt": "Деревянная лестница вдоль белой стены",
+          "width": 1600,
+          "height": 2400
+        },
+        {
+          "key": "arch-apartment-03",
+          "alt": "Белые ступени, уходящие на антресоль",
+          "width": 1600,
+          "height": 2400
+        }
       ],
       "description": [
         "Двухуровневая квартира в доходном доме 1903 года на Петроградской стороне. От исторической отделки ничего не сохранилось, кроме формы окон, и мы решили сделать её главной темой.",
@@ -66,12 +136,37 @@
       "year": 2023,
       "area": 412,
       "category": "residential",
-      "cover": { "key": "grove-house-cover", "alt": "Дом из камня и бетона с изогнутой кровлей среди зелени", "width": 2400, "height": 1969 },
+      "cover": {
+        "key": "grove-house-cover",
+        "alt": "Дом из камня и бетона с изогнутой кровлей среди зелени",
+        "width": 2400,
+        "height": 1969
+      },
       "gallery": [
-        { "key": "grove-house-01", "alt": "Бетонный навес над входом на фоне бамбуковой рощи", "width": 1800, "height": 2400 },
-        { "key": "grove-house-02", "alt": "Стена из серых каменных плит с узкими проёмами", "width": 1757, "height": 2400 },
-        { "key": "grove-house-03", "alt": "Дорожка вдоль дома к пруду", "width": 1800, "height": 2400 },
-        { "key": "grove-house-04", "alt": "Решётчатая бетонная стена с узкими окнами", "width": 1800, "height": 2400 }
+        {
+          "key": "grove-house-01",
+          "alt": "Бетонный навес над входом на фоне бамбуковой рощи",
+          "width": 1800,
+          "height": 2400
+        },
+        {
+          "key": "grove-house-02",
+          "alt": "Стена из серых каменных плит с узкими проёмами",
+          "width": 1757,
+          "height": 2400
+        },
+        {
+          "key": "grove-house-03",
+          "alt": "Дорожка вдоль дома к пруду",
+          "width": 1800,
+          "height": 2400
+        },
+        {
+          "key": "grove-house-04",
+          "alt": "Решётчатая бетонная стена с узкими окнами",
+          "width": 1800,
+          "height": 2400
+        }
       ],
       "description": [
         "Загородный дом на склоне над бамбуковой рощей. Участок влажный и тенистый, и заказчик хотел дом, который не придётся каждый год красить и ремонтировать.",
@@ -86,12 +181,37 @@
       "year": 2022,
       "area": 148,
       "category": "residential",
-      "cover": { "key": "valdai-aframe-cover", "alt": "Гостиная под треугольным остеклением с видом на лес", "width": 2400, "height": 1600 },
+      "cover": {
+        "key": "valdai-aframe-cover",
+        "alt": "Гостиная под треугольным остеклением с видом на лес",
+        "width": 2400,
+        "height": 1600
+      },
       "gallery": [
-        { "key": "valdai-aframe-01", "alt": "Открытое пространство с кухней, островом и лестницей на второй свет", "width": 2400, "height": 1600 },
-        { "key": "valdai-aframe-02", "alt": "Высокое окно с ромбовидным переплётом и сосны за ним", "width": 1600, "height": 2400 },
-        { "key": "valdai-aframe-03", "alt": "Кухня с окном во всю ширину столешницы", "width": 2400, "height": 1600 },
-        { "key": "valdai-aframe-04", "alt": "Обеденный уголок у окна в лес", "width": 2400, "height": 1600 }
+        {
+          "key": "valdai-aframe-01",
+          "alt": "Открытое пространство с кухней, островом и лестницей на второй свет",
+          "width": 2400,
+          "height": 1600
+        },
+        {
+          "key": "valdai-aframe-02",
+          "alt": "Высокое окно с ромбовидным переплётом и сосны за ним",
+          "width": 1600,
+          "height": 2400
+        },
+        {
+          "key": "valdai-aframe-03",
+          "alt": "Кухня с окном во всю ширину столешницы",
+          "width": 2400,
+          "height": 1600
+        },
+        {
+          "key": "valdai-aframe-04",
+          "alt": "Обеденный уголок у окна в лес",
+          "width": 2400,
+          "height": 1600
+        }
       ],
       "description": [
         "Дом для выходных на краю соснового бора. Форма шалаша здесь не стилизация, а расчёт: крутые скаты сбрасывают снег сами, и кровле не нужен обогрев.",
@@ -106,11 +226,31 @@
       "year": 2021,
       "area": 3850,
       "category": "public",
-      "cover": { "key": "embankment-library-cover", "alt": "Читальный зал с деревянными столами и ступенчатым амфитеатром", "width": 1800, "height": 2400 },
+      "cover": {
+        "key": "embankment-library-cover",
+        "alt": "Читальный зал с деревянными столами и ступенчатым амфитеатром",
+        "width": 1800,
+        "height": 2400
+      },
       "gallery": [
-        { "key": "embankment-library-01", "alt": "Длинный проход между деревянными стеллажами", "width": 1800, "height": 2400 },
-        { "key": "embankment-library-02", "alt": "Читатель у стеллажей в тёплом свете", "width": 2400, "height": 1590 },
-        { "key": "embankment-library-03", "alt": "Высокий книжный стеллаж с подсветкой полок", "width": 1600, "height": 2400 }
+        {
+          "key": "embankment-library-01",
+          "alt": "Длинный проход между деревянными стеллажами",
+          "width": 1800,
+          "height": 2400
+        },
+        {
+          "key": "embankment-library-02",
+          "alt": "Читатель у стеллажей в тёплом свете",
+          "width": 2400,
+          "height": 1590
+        },
+        {
+          "key": "embankment-library-03",
+          "alt": "Высокий книжный стеллаж с подсветкой полок",
+          "width": 1600,
+          "height": 2400
+        }
       ],
       "description": [
         "Реконструкция районной библиотеки, которая к 2018 году почти потеряла читателей. Задача была не просто обновить фонд, а сделать место, куда приходят без повода.",
@@ -127,12 +267,37 @@
       "year": 2024,
       "area": 1240,
       "category": "public",
-      "cover": { "key": "light-pavilion-cover", "alt": "White curved gallery walls under a roof light", "width": 1800, "height": 2400 },
+      "cover": {
+        "key": "light-pavilion-cover",
+        "alt": "White curved gallery walls under a roof light",
+        "width": 1800,
+        "height": 2400
+      },
       "gallery": [
-        { "key": "light-pavilion-01", "alt": "Pale concrete spiral stair in the atrium", "width": 1600, "height": 2400 },
-        { "key": "light-pavilion-02", "alt": "Visitor on a bench facing paintings in a white room", "width": 1920, "height": 2400 },
-        { "key": "light-pavilion-03", "alt": "Facade of repeating white concrete cells", "width": 1600, "height": 2400 },
-        { "key": "light-pavilion-04", "alt": "Concrete volumes of the pavilion against the sky", "width": 1894, "height": 2400 }
+        {
+          "key": "light-pavilion-01",
+          "alt": "Pale concrete spiral stair in the atrium",
+          "width": 1600,
+          "height": 2400
+        },
+        {
+          "key": "light-pavilion-02",
+          "alt": "Visitor on a bench facing paintings in a white room",
+          "width": 1920,
+          "height": 2400
+        },
+        {
+          "key": "light-pavilion-03",
+          "alt": "Facade of repeating white concrete cells",
+          "width": 1600,
+          "height": 2400
+        },
+        {
+          "key": "light-pavilion-04",
+          "alt": "Concrete volumes of the pavilion against the sky",
+          "width": 1894,
+          "height": 2400
+        }
       ],
       "description": [
         "An exhibition pavilion on the site of a former factory warehouse. The city wanted a venue for contemporary art that would run all year and need no artificial light during the day.",
@@ -147,12 +312,37 @@
       "year": 2024,
       "area": 132,
       "category": "interior",
-      "cover": { "key": "presnya-apartment-cover", "alt": "Grey living room with a low sofa and a floor-to-ceiling window", "width": 2400, "height": 1500 },
+      "cover": {
+        "key": "presnya-apartment-cover",
+        "alt": "Grey living room with a low sofa and a floor-to-ceiling window",
+        "width": 2400,
+        "height": 1500
+      },
       "gallery": [
-        { "key": "presnya-apartment-01", "alt": "Dark backlit wall and a soft corner sofa", "width": 1920, "height": 2400 },
-        { "key": "presnya-apartment-02", "alt": "Living room seen from the entrance: shelving, sofa and a large window", "width": 1920, "height": 2400 },
-        { "key": "presnya-apartment-03", "alt": "Rattan chair against a pale wall", "width": 1600, "height": 2400 },
-        { "key": "presnya-apartment-04", "alt": "Linen curtains in soft daylight", "width": 1600, "height": 2400 }
+        {
+          "key": "presnya-apartment-01",
+          "alt": "Dark backlit wall and a soft corner sofa",
+          "width": 1920,
+          "height": 2400
+        },
+        {
+          "key": "presnya-apartment-02",
+          "alt": "Living room seen from the entrance: shelving, sofa and a large window",
+          "width": 1920,
+          "height": 2400
+        },
+        {
+          "key": "presnya-apartment-03",
+          "alt": "Rattan chair against a pale wall",
+          "width": 1600,
+          "height": 2400
+        },
+        {
+          "key": "presnya-apartment-04",
+          "alt": "Linen curtains in soft daylight",
+          "width": 1600,
+          "height": 2400
+        }
       ],
       "description": [
         "An apartment for a couple who work from home a lot and dislike having things on show. The original plan was five small rooms off a long corridor.",
@@ -167,11 +357,31 @@
       "year": 2023,
       "area": 186,
       "category": "interior",
-      "cover": { "key": "arch-apartment-cover", "alt": "Built-in sofa beneath arched windows in a pale living room", "width": 2400, "height": 1600 },
+      "cover": {
+        "key": "arch-apartment-cover",
+        "alt": "Built-in sofa beneath arched windows in a pale living room",
+        "width": 2400,
+        "height": 1600
+      },
       "gallery": [
-        { "key": "arch-apartment-01", "alt": "Sculptural spiral stair in smooth plaster", "width": 2400, "height": 1600 },
-        { "key": "arch-apartment-02", "alt": "Timber stair running along a white wall", "width": 1600, "height": 2400 },
-        { "key": "arch-apartment-03", "alt": "White steps leading up to a mezzanine", "width": 1600, "height": 2400 }
+        {
+          "key": "arch-apartment-01",
+          "alt": "Sculptural spiral stair in smooth plaster",
+          "width": 2400,
+          "height": 1600
+        },
+        {
+          "key": "arch-apartment-02",
+          "alt": "Timber stair running along a white wall",
+          "width": 1600,
+          "height": 2400
+        },
+        {
+          "key": "arch-apartment-03",
+          "alt": "White steps leading up to a mezzanine",
+          "width": 1600,
+          "height": 2400
+        }
       ],
       "description": [
         "A two-level apartment in a 1903 tenement building on the Petrograd Side. Nothing of the original finishes survived except the shape of the windows, so we made that shape the theme.",
@@ -186,12 +396,37 @@
       "year": 2023,
       "area": 412,
       "category": "residential",
-      "cover": { "key": "grove-house-cover", "alt": "Stone and concrete house with a curved roof among greenery", "width": 2400, "height": 1969 },
+      "cover": {
+        "key": "grove-house-cover",
+        "alt": "Stone and concrete house with a curved roof among greenery",
+        "width": 2400,
+        "height": 1969
+      },
       "gallery": [
-        { "key": "grove-house-01", "alt": "Concrete canopy over the entrance against a bamboo grove", "width": 1800, "height": 2400 },
-        { "key": "grove-house-02", "alt": "Wall of grey stone slabs with narrow openings", "width": 1757, "height": 2400 },
-        { "key": "grove-house-03", "alt": "Path along the house towards the pond", "width": 1800, "height": 2400 },
-        { "key": "grove-house-04", "alt": "Latticed concrete wall with slot windows", "width": 1800, "height": 2400 }
+        {
+          "key": "grove-house-01",
+          "alt": "Concrete canopy over the entrance against a bamboo grove",
+          "width": 1800,
+          "height": 2400
+        },
+        {
+          "key": "grove-house-02",
+          "alt": "Wall of grey stone slabs with narrow openings",
+          "width": 1757,
+          "height": 2400
+        },
+        {
+          "key": "grove-house-03",
+          "alt": "Path along the house towards the pond",
+          "width": 1800,
+          "height": 2400
+        },
+        {
+          "key": "grove-house-04",
+          "alt": "Latticed concrete wall with slot windows",
+          "width": 1800,
+          "height": 2400
+        }
       ],
       "description": [
         "A country house on a slope above a bamboo grove. The site is damp and shaded, and the client wanted a house that would not need repainting and repairs every year.",
@@ -206,12 +441,37 @@
       "year": 2022,
       "area": 148,
       "category": "residential",
-      "cover": { "key": "valdai-aframe-cover", "alt": "Living room under triangular glazing looking out to the forest", "width": 2400, "height": 1600 },
+      "cover": {
+        "key": "valdai-aframe-cover",
+        "alt": "Living room under triangular glazing looking out to the forest",
+        "width": 2400,
+        "height": 1600
+      },
       "gallery": [
-        { "key": "valdai-aframe-01", "alt": "Open-plan space with kitchen island and a stair to the gallery", "width": 2400, "height": 1600 },
-        { "key": "valdai-aframe-02", "alt": "Tall window with diamond glazing bars and pines beyond", "width": 1600, "height": 2400 },
-        { "key": "valdai-aframe-03", "alt": "Kitchen with a window spanning the full worktop", "width": 2400, "height": 1600 },
-        { "key": "valdai-aframe-04", "alt": "Dining nook by a window onto the forest", "width": 2400, "height": 1600 }
+        {
+          "key": "valdai-aframe-01",
+          "alt": "Open-plan space with kitchen island and a stair to the gallery",
+          "width": 2400,
+          "height": 1600
+        },
+        {
+          "key": "valdai-aframe-02",
+          "alt": "Tall window with diamond glazing bars and pines beyond",
+          "width": 1600,
+          "height": 2400
+        },
+        {
+          "key": "valdai-aframe-03",
+          "alt": "Kitchen with a window spanning the full worktop",
+          "width": 2400,
+          "height": 1600
+        },
+        {
+          "key": "valdai-aframe-04",
+          "alt": "Dining nook by a window onto the forest",
+          "width": 2400,
+          "height": 1600
+        }
       ],
       "description": [
         "A weekend house at the edge of a pine forest. The A-frame is not a stylistic choice but a calculation: the steep pitches shed snow on their own, so the roof needs no heating.",
@@ -226,11 +486,31 @@
       "year": 2021,
       "area": 3850,
       "category": "public",
-      "cover": { "key": "embankment-library-cover", "alt": "Reading room with timber tables and a stepped amphitheatre", "width": 1800, "height": 2400 },
+      "cover": {
+        "key": "embankment-library-cover",
+        "alt": "Reading room with timber tables and a stepped amphitheatre",
+        "width": 1800,
+        "height": 2400
+      },
       "gallery": [
-        { "key": "embankment-library-01", "alt": "Long aisle between timber bookshelves", "width": 1800, "height": 2400 },
-        { "key": "embankment-library-02", "alt": "Reader by the shelves in warm light", "width": 2400, "height": 1590 },
-        { "key": "embankment-library-03", "alt": "Tall bookcase with lit shelves", "width": 1600, "height": 2400 }
+        {
+          "key": "embankment-library-01",
+          "alt": "Long aisle between timber bookshelves",
+          "width": 1800,
+          "height": 2400
+        },
+        {
+          "key": "embankment-library-02",
+          "alt": "Reader by the shelves in warm light",
+          "width": 2400,
+          "height": 1590
+        },
+        {
+          "key": "embankment-library-03",
+          "alt": "Tall bookcase with lit shelves",
+          "width": 1600,
+          "height": 2400
+        }
       ],
       "description": [
         "The renovation of a district library that had all but lost its readers by 2018. The brief was not just to refresh the collection but to make a place people visit without a reason.",

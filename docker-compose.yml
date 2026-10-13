@@ -1,0 +1,48 @@
+# Local CMS: PostgreSQL + Strapi v5. The static site never needs this to build;
+# it reads the committed snapshot in /content unless STRAPI_URL is set.
+#
+#   npm run cms:up        # first run seeds Strapi from /content and /media
+#   open http://localhost:1337/admin
+#   STRAPI_URL=http://localhost:1337 npm run snapshot
+
+services:
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: ostov
+      POSTGRES_USER: ostov
+      POSTGRES_PASSWORD: ostov
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ostov -d ostov"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+
+  cms:
+    build: ./cms
+    env_file: ./cms/.env
+    environment:
+      DATABASE_CLIENT: postgres
+      DATABASE_HOST: postgres
+      DATABASE_PORT: 5432
+      DATABASE_NAME: ostov
+      DATABASE_USERNAME: ostov
+      DATABASE_PASSWORD: ostov
+      DATABASE_SSL: "false"
+      SNAPSHOT_DIR: /snapshot/content
+      MEDIA_DIR: /snapshot/media/originals
+    ports:
+      - "1337:1337"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - ./content:/snapshot/content:ro
+      - ./media:/snapshot/media:ro
+      - uploads:/opt/app/public/uploads
+
+volumes:
+  pgdata:
+  uploads:

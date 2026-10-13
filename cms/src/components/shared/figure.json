@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_figures",
+  "info": {
+    "displayName": "Figure",
+    "icon": "picture",
+    "description": "An image with alt text. Alt lives here, not on the upload, so it can differ per locale."
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": ["images"]
+    },
+    "alt": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

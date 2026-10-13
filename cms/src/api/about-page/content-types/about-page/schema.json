@@ -1,0 +1,48 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_pages",
+  "info": {
+    "singularName": "about-page",
+    "pluralName": "about-pages",
+    "displayName": "About page",
+    "description": "Studio intro, approach, team and working stages."
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": { "localized": true }
+  },
+  "attributes": {
+    "intro": {
+      "type": "text",
+      "required": true,
+      "pluginOptions": { "i18n": { "localized": true } }
+    },
+    "image": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.figure",
+      "required": true,
+      "pluginOptions": { "i18n": { "localized": true } }
+    },
+    "approach": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.titled-text",
+      "pluginOptions": { "i18n": { "localized": true } }
+    },
+    "team": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.team-member",
+      "pluginOptions": { "i18n": { "localized": true } }
+    },
+    "stages": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.titled-text",
+      "pluginOptions": { "i18n": { "localized": true } }
+    }
+  }
+}

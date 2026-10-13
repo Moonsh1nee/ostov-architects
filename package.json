@@ -9,10 +9,13 @@
     "prebuild": "npm run images",
     "build": "next build",
     "postbuild": "tsx scripts/fix-export-segments.ts",
-    "start": "npx serve out -p 3004",
+    "start": "npx serve@14 out -l 3004",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
-    "test": "vitest run --passWithNoTests"
+    "test": "vitest run",
+    "snapshot": "tsx scripts/snapshot.ts",
+    "cms:up": "node cms/scripts/init-env.mjs && docker compose up --build -d && docker compose logs -f cms",
+    "cms:down": "docker compose down"
   },
   "dependencies": {
     "gsap": "^3.15.0",

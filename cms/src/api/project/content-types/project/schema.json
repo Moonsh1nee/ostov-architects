@@ -1,0 +1,71 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "singularName": "project",
+    "pluralName": "projects",
+    "displayName": "Project",
+    "description": "A built or designed project. Slug, year, area and category are shared across locales so /projects/<slug>/ maps 1:1 between languages."
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": { "localized": true }
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "pluginOptions": { "i18n": { "localized": true } }
+    },
+    "slug": {
+      "type": "string",
+      "required": true,
+      "regex": "^[a-z0-9-]+$",
+      "pluginOptions": { "i18n": { "localized": false } }
+    },
+    "location": {
+      "type": "string",
+      "required": true,
+      "pluginOptions": { "i18n": { "localized": true } }
+    },
+    "year": {
+      "type": "integer",
+      "required": true,
+      "min": 1900,
+      "max": 2100,
+      "pluginOptions": { "i18n": { "localized": false } }
+    },
+    "area": {
+      "type": "decimal",
+      "required": true,
+      "min": 0,
+      "pluginOptions": { "i18n": { "localized": false } }
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": ["residential", "public", "interior"],
+      "required": true,
+      "pluginOptions": { "i18n": { "localized": false } }
+    },
+    "cover": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.figure",
+      "required": true,
+      "pluginOptions": { "i18n": { "localized": true } }
+    },
+    "gallery": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.figure",
+      "pluginOptions": { "i18n": { "localized": true } }
+    },
+    "description": {
+      "type": "text",
+      "required": true,
+      "pluginOptions": { "i18n": { "localized": true } }
+    }
+  }
+}

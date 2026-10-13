@@ -1,4 +1,4 @@
-import { existsSync } from "node:fs";
+import { readdirSync } from "node:fs";
 import { describe, expect, it, vi } from "vitest";
 import projectsJson from "@/content/projects.json";
 import {
@@ -150,7 +150,8 @@ describe("snapshot invariants", () => {
   it("only references images that exist in media/originals", async () => {
     const [projects, home, about] = await Promise.all([source.projects("ru"), source.home("ru"), source.about("ru")]);
     const keys = [...projects.flatMap((p) => [p.cover, ...p.gallery]), home.heroImage, about.image].map((i) => i.key);
-    const missing = keys.filter((k) => !existsSync(`media/originals/${k}.jpg`));
+    const originals = new Set(readdirSync("media/originals").map((f) => f.replace(/.[a-z0-9]+$/i, "")));
+    const missing = keys.filter((k) => !originals.has(k));
     expect(missing).toEqual([]);
   });
 

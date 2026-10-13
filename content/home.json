@@ -1,26 +1,80 @@
 {
   "ru": {
-    "heroTitle": ["Сначала каркас.", "Потом всё", "остальное."],
-    "heroImage": { "key": "hero-grove-house", "alt": "Дом из камня и бетона с изогнутой кровлей на зелёном склоне", "width": 2400, "height": 1457 },
+    "heroTitle": [
+      "Сначала каркас.",
+      "Потом всё",
+      "остальное."
+    ],
+    "heroImage": {
+      "key": "hero-grove-house",
+      "alt": "Дом из камня и бетона с изогнутой кровлей на зелёном склоне",
+      "width": 2400,
+      "height": 1457
+    },
     "manifesto": "Остов — это то, что остаётся, когда убрано лишнее. Каждый проект мы начинаем с конструкции, света и пути человека через пространство, а материал и цвет добавляем последними. Поэтому наши здания стареют медленно: в них нечему выходить из моды.",
     "stats": [
-      { "value": "14", "label": "лет практики" },
-      { "value": "62", "label": "реализованных объекта" },
-      { "value": "180 000", "label": "м² спроектировано" },
-      { "value": "9", "label": "регионов России" }
+      {
+        "value": "14",
+        "label": "лет практики"
+      },
+      {
+        "value": "62",
+        "label": "реализованных объекта"
+      },
+      {
+        "value": "180 000",
+        "label": "м² спроектировано"
+      },
+      {
+        "value": "9",
+        "label": "регионов России"
+      }
     ],
-    "featured": ["grove-house", "light-pavilion", "valdai-aframe", "embankment-library", "arch-apartment"]
+    "featured": [
+      "grove-house",
+      "light-pavilion",
+      "valdai-aframe",
+      "embankment-library",
+      "arch-apartment"
+    ]
   },
   "en": {
-    "heroTitle": ["Structure first.", "Everything else", "follows."],
-    "heroImage": { "key": "hero-grove-house", "alt": "Stone and concrete house with a curved roof on a green slope", "width": 2400, "height": 1457 },
+    "heroTitle": [
+      "Structure first.",
+      "Everything else",
+      "follows."
+    ],
+    "heroImage": {
+      "key": "hero-grove-house",
+      "alt": "Stone and concrete house with a curved roof on a green slope",
+      "width": 2400,
+      "height": 1457
+    },
     "manifesto": "Ostov is what remains once everything superfluous is removed. We begin every project with structure, light and the way a person moves through space, and add material and colour last. That is why our buildings age slowly: there is nothing in them to go out of fashion.",
     "stats": [
-      { "value": "14", "label": "years in practice" },
-      { "value": "62", "label": "completed buildings" },
-      { "value": "180,000", "label": "m² designed" },
-      { "value": "9", "label": "regions of Russia" }
+      {
+        "value": "14",
+        "label": "years in practice"
+      },
+      {
+        "value": "62",
+        "label": "completed buildings"
+      },
+      {
+        "value": "180,000",
+        "label": "m² designed"
+      },
+      {
+        "value": "9",
+        "label": "regions of Russia"
+      }
     ],
-    "featured": ["grove-house", "light-pavilion", "valdai-aframe", "embankment-library", "arch-apartment"]
+    "featured": [
+      "grove-house",
+      "light-pavilion",
+      "valdai-aframe",
+      "embankment-library",
+      "arch-apartment"
+    ]
   }
 }
