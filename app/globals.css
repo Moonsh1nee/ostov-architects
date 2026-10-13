@@ -130,12 +130,28 @@
     overflow: hidden;
     background: var(--paper-deep);
   }
+  /* <picture> and <img> are separate layers so the clip reveal (scales the
+     picture) and the parallax (moves the img) never fight over one transform. */
+  .frame picture {
+    position: absolute;
+    inset: 0;
+    display: block;
+  }
   .frame img {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  .transition-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 60;
+    background: var(--ink);
+    visibility: hidden;
+    pointer-events: none;
   }
 }
 

@@ -47,34 +47,37 @@ export async function HomeView({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      <section data-hscroll className="relative overflow-hidden py-24 md:flex md:h-svh md:flex-col md:justify-center md:py-0">
-        <div className="container-x flex items-end justify-between gap-6">
-          <div>
-            <SectionLabel index="01">
-              {featured.length} / {projects.length}
-            </SectionLabel>
-            <h2 className="display mt-4 text-[clamp(2.25rem,5vw,4.5rem)]">{t.home.featured}</h2>
+      {/* GSAP pins the inner div: its pin-spacer must live inside a node React owns, or unmounting the page crashes. */}
+      <section data-hscroll className="relative overflow-hidden">
+        <div data-hscroll-pin className="py-24 md:flex md:h-svh md:flex-col md:justify-center md:pt-(--header-h) md:pb-0">
+          <div className="container-x flex items-end justify-between gap-6">
+            <div>
+              <SectionLabel index="01">
+                {featured.length} / {projects.length}
+              </SectionLabel>
+              <h2 className="display mt-4 text-[clamp(2.25rem,5vw,4.5rem)]">{t.home.featured}</h2>
+            </div>
+            <Link href={localePath(locale, routes.projects)} className="caption link-underline shrink-0 pb-2">
+              {t.home.allProjects} →
+            </Link>
           </div>
-          <Link href={localePath(locale, routes.projects)} className="caption link-underline shrink-0 pb-2">
-            {t.home.allProjects} →
-          </Link>
+          <ul
+            data-hscroll-track
+            className="container-x mt-10 flex snap-x snap-mandatory gap-(--gutter) overflow-x-auto pb-4 scrollbar-none md:mt-14 [&::-webkit-scrollbar]:hidden"
+          >
+            {featured.map((project, i) => (
+              <li key={project.slug} className="w-[78vw] shrink-0 snap-start md:w-[min(34vw,32rem)]">
+                <ProjectCard
+                  project={project}
+                  locale={locale}
+                  index={i}
+                  aspect="aspect-4/5 md:aspect-5/6"
+                  sizes="(min-width: 768px) 34vw, 78vw"
+                />
+              </li>
+            ))}
+          </ul>
         </div>
-        <ul
-          data-hscroll-track
-          className="container-x mt-10 flex snap-x snap-mandatory gap-(--gutter) overflow-x-auto pb-4 scrollbar-none md:mt-14 [&::-webkit-scrollbar]:hidden"
-        >
-          {featured.map((project, i) => (
-            <li key={project.slug} className="w-[78vw] shrink-0 snap-start md:w-[min(34vw,32rem)]">
-              <ProjectCard
-                project={project}
-                locale={locale}
-                index={i}
-                aspect="aspect-4/5 md:aspect-5/6"
-                sizes="(min-width: 768px) 34vw, 78vw"
-              />
-            </li>
-          ))}
-        </ul>
       </section>
 
       <section className="container-x py-28 md:py-44">

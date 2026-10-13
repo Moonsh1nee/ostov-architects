@@ -15,7 +15,7 @@ export function Header({ locale }: { locale: Locale }) {
     // data-tone is driven by HeaderNav: light text whenever a dark section sits under the bar.
     <header
       data-site-header
-      className="pointer-events-none fixed inset-x-0 top-0 z-50 text-ink transition-colors duration-300 data-[tone=dark]:text-paper"
+      className="pointer-events-none fixed inset-x-0 top-0 z-50 text-ink transition-[color,translate] duration-300 ease-out-expo data-[hidden=true]:-translate-y-full data-[tone=dark]:text-paper"
     >
       <div className="container-x flex h-(--header-h) items-center justify-between">
         <Link

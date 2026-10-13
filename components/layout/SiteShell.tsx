@@ -27,7 +27,7 @@ export function SiteShell({ locale, children }: { locale: Locale; children: Reac
           {children}
         </main>
         <Footer locale={locale} />
-        <div data-transition-overlay aria-hidden="true" className="pointer-events-none fixed inset-0 z-60 bg-ink opacity-0" />
+        <div data-transition-overlay aria-hidden="true" className="transition-overlay" />
         <MotionRoot />
       </body>
     </html>

@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { asset, localePath, parseLocalePath } from "@/lib/paths";
 import { setScrollLocked } from "../motion/events";
+import { useHeaderAutoHide } from "./useHeaderAutoHide";
 import { useHeaderTone } from "./useHeaderTone";
 
 interface NavLink {
@@ -38,6 +39,7 @@ export function HeaderNav({ links, labels }: HeaderNavProps) {
   // Close on navigation without an effect: compare against the path the menu opened on.
   const isOpen = open && openedAt === pathname;
   useHeaderTone(pathname, isOpen);
+  useHeaderAutoHide(isOpen);
 
   useEffect(() => {
     if (!isOpen) return;

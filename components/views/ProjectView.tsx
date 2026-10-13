@@ -32,8 +32,10 @@ export async function ProjectView({ locale, slug }: { locale: Locale; slug: stri
         <Link href={localePath(locale, routes.projects)} className="caption link-underline text-ink-soft">
           ← {t.project.back}
         </Link>
-        <h1 data-split-lines className="display mt-6 max-w-[14ch] text-[clamp(3rem,9vw,9.5rem)]">
-          {project.title}
+        <h1 className="display mt-6 max-w-[14ch] text-[clamp(3rem,9vw,9.5rem)]">
+          <span className="hero-line">
+            <span>{project.title}</span>
+          </span>
         </h1>
       </header>
 
