@@ -300,6 +300,18 @@
   animation: slide-zoom calc(var(--slide) * 3) var(--ease-out) infinite both;
   animation-delay: calc(var(--i, 0) * var(--slide) - var(--slide-fade));
 }
+/* Slides 2+ stay out of layout until the page is idle, so their lazy images
+   do not compete with the first screen. Their animations then start late, so
+   --hero-elapsed (set by MotionRoot) shifts them back onto the shared cycle. */
+html:not([data-idle]) .slide:not(:first-child),
+html:not([data-idle]) .slide-label:not(:first-child) {
+  display: none;
+}
+.slide:not(:first-child),
+.slide-label:not(:first-child),
+.slide:not(:first-child) img {
+  animation-delay: calc(var(--i, 0) * var(--slide) - var(--slide-fade) - var(--hero-elapsed, 0s));
+}
 
 /* ── Intro ───────────────────────────────────────────────────────────
    Once per session (an inline script in <head> sets html[data-intro]).
@@ -324,18 +336,18 @@
   }
 }
 .intro {
-  animation: intro-out 0.8s var(--ease-out) 2.9s forwards;
+  animation: intro-out 0.6s var(--ease-out) 1.95s forwards;
 }
 .intro-letter {
   display: inline-block;
   animation:
     line-up 1.1s var(--ease-out) both,
-    rise-out 0.8s cubic-bezier(0.7, 0, 0.84, 0) 2.5s forwards;
-  animation-delay: calc(var(--i, 0) * 0.07s), calc(2.5s + var(--i, 0) * 0.04s);
+    rise-out 0.7s cubic-bezier(0.7, 0, 0.84, 0) 1.6s forwards;
+  animation-delay: calc(var(--i, 0) * 0.07s), calc(1.6s + var(--i, 0) * 0.04s);
 }
 .intro-rule {
   transform-origin: left;
-  animation: rule-draw 1.4s var(--ease-out) 0.3s both;
+  animation: rule-draw 1.2s var(--ease-out) 0.2s both;
 }
 html[data-intro="leaving"] .intro {
   animation: intro-out 0.45s var(--ease-out) forwards;
@@ -345,7 +357,7 @@ html[data-intro="skip"] .intro {
 }
 /* While the intro plays, the hero UI waits for it instead of animating underneath. */
 html:not([data-intro="skip"]):not([data-intro="leaving"]) .hero-fade {
-  animation-delay: 3.2s;
+  animation-delay: 2.2s;
 }
 
 @media (prefers-reduced-motion: reduce) {

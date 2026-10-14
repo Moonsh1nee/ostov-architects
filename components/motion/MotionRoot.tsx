@@ -17,6 +17,10 @@ export function MotionRoot() {
   useEffect(() => {
     let cancelled = false;
     const boot = () => {
+      // Releases the deferred hero slides (see .slide in globals.css), aligned to the running cycle.
+      const root = document.documentElement;
+      root.style.setProperty("--hero-elapsed", `${(performance.now() / 1000).toFixed(2)}s`);
+      root.dataset.idle = "";
       void import("./engine").then(({ createEngine }) => {
         if (cancelled) return;
         engine.current = createEngine({ navigate: (href) => router.push(href, { scroll: false }), basePath: BASE_PATH });

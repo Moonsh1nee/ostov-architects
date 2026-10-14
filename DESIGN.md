@@ -32,7 +32,7 @@ Single light theme by design: the genre is print-like, and dark sections already
 ## Motion
 | What | How | Why |
 |---|---|---|
-| Intro: wordmark letters rise, rule draws, all lifts away (≈3.7s, once per session) | CSS keyframes + head script | decided before first paint; skippable |
+| Intro: wordmark letters rise, rule draws, all lifts away (≈2.5s, once per session) | CSS keyframes + head script | decided before first paint; skippable |
 | Hero slideshow: 3 slides × 6s, 1.2s crossfade + zoom 1.12 → 1 | CSS keyframes, shared 18s cycle | runs from first frame; static first slide under reduced motion |
 | Line-by-line page titles, project cover zoom-out | CSS keyframes | starts on first paint, no JS |
 | Fade-up reveals (24px, 0.9s, stagger 70ms) | GSAP + ScrollTrigger, `once` | below-the-fold only; on-screen elements are never hidden |
