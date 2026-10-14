@@ -60,18 +60,18 @@ Strapi v5 + PostgreSQL ──REST──▶ lib/strapi.ts ──▶ lib/content.t
 
 ## Lighthouse (mobile)
 
-Lighthouse 13.5, мобильный профиль по умолчанию (как в PageSpeed Insights: эмуляция Moto G Power, simulated slow 4G). Замер по живому сайту на GitHub Pages, 14.10.2026.
+Lighthouse 13.5, мобильный профиль по умолчанию (как в PageSpeed Insights: эмуляция Moto G Power, simulated slow 4G). Замер по живому сайту на GitHub Pages после редизайна с интро, 14.10.2026. Lighthouse стартует со свежим профилем, поэтому интро на главной в замер попадает.
 
 | Страница | Performance | Accessibility | Best Practices | SEO | LCP | CLS | TBT |
 |---|---|---|---|---|---|---|---|
-| `/` | 94 | 100 | 100 | 100 | 2.7 s | 0 | 30 ms |
-| `/en/` | 97 | 100 | 100 | 100 | 2.5 s | 0 | 70 ms |
+| `/` | 95 / 95 | 100 | 100 | 100 | 2.6 s | 0 | 30–50 ms |
+| `/en/` | 90 / 96 | 100 | 100 | 100 | 2.5–3.3 s | 0 | 30–40 ms |
 | `/projects/` | 98 | 100 | 100 | 100 | 2.3 s | 0 | 40 ms |
-| `/projects/grove-house/` | 96 | 100 | 100 | 100 | 2.6 s | 0 | 40 ms |
-| `/about/` | 97 | 100 | 100 | 100 | 2.5 s | 0 | 40 ms |
-| `/contacts/` | 98 | 100 | 100 | 100 | 2.3 s | 0 | 40 ms |
+| `/projects/grove-house/` | 99 | 100 | 100 | 100 | 1.7 s | 0 | 20 ms |
+| `/about/` | 96 | 100 | 100 | 100 | 2.8 s | 0 | 40 ms |
+| `/contacts/` | 100 | 100 | 100 | 100 | 1.9 s | 0 | 20 ms |
 
-Оценка Performance на GitHub Pages плавает на ±3 пункта от прогона к прогону: это задержка CDN, а не сайт.
+Для главных указаны два прогона. Оценка на GitHub Pages плавает на несколько пунктов от прогона к прогону: это задержка CDN и шум симуляции, а не сайт.
 
 ## Запуск
 
